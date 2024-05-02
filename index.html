@@ -1,0 +1,46 @@
+<title>Super cool effects station (that is super cool)</title>
+<script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+<script src="script.js" type="module"></script>
+<h1>Multi-Effects</h1>
+<h2>Aaron Harsh</h2>
+<body>
+    <div>
+        <label for="dropdown-ins">Select a Midi Input:</label>
+        <select id="dropdown-ins">
+        </select>
+    </div>
+    <div>
+        <label for="dropdown-outs">Select a Midi Output:</label>
+        <select id="dropdown-outs">
+        </select>
+    </div>
+    <div>
+        <h3> Octave/Harmonizer</h3>
+        <label for="slide1">Oct</label>
+        <input type="range" id="slide1" min="-12" max="12">
+        <p id="harmony1amt">0 semitones</p>
+    </div>
+    <div>
+        <!-- <label for="slide2">Level</label>
+        <input type="range" id="slide2" min="0" max="10">
+        <p id="harmony2amt">0 </p> -->
+    </div>
+    <div>
+        <h3>Doubler</h3> <input type="checkbox" id="doublerCheck">
+
+    </div>
+    <div>
+        <h3>Delay</h3>
+        
+        <label for="delayTime">Delay Time</label>
+        <input type="range" id="delayTime" min="0" max="3200">
+        <p id="delayTimeAmt">x ms</p>
+        <label for="Feedback>">Feedback</label>
+        <input type="range" id="Feedback" min="0" max="1000">
+       
+    </div>
+</body>
+
+<!-- My midi effect is a harmonizer. I originally intended to have the the effect just add the fifth and the octave to give the 
+    effect of playing a power chord w/ just one finger,but I thought it would be more useful to be able to select which intervals you want harmonized.
+    It works by adding the value from the slider to the root notes and then returns the root and two harmonies to the output. -->
